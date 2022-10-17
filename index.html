@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment #09</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <a href="#">Typescript Assignment By <span>Tamoor</span></a>
+    </div>
+  </header>
+
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #1</span>
+        Write a TypeScript program to list the properties of a TypeScript object
+        var student = {<br>
+        name : "David Rayy",<br>
+        sclass : "VI",<br>
+        rollno : 12 };<br>
+        Sample Output: name,sclass,rollno<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q1()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        var student = {<br>
+        name : "David Rayy",<br>
+        sclass : "VI",<br>
+        rollno : 12 };<br>
+        let myContainer = <HTMLElement>document.getElementById('output');<br>
+          myContainer.innerHTML = Object.keys(student).toString();<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output1" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #2</span>
+        Write a TypeScript program to delete the rollno property from the following object. Also print the object before
+        or after deleting the property.
+        Sample object:<br>
+        var student = {<br>
+        name : "David Rayy",<br>
+        sclass : "VI",<br>
+        rollno : 12 };<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q2()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        interface student {<br>
+        name: string;<br>
+        sclass: string;<br>
+        rollno?: number;<br>
+        }<br>
+        var student: student = {<br>
+        name: "David Rayy",<br>
+        sclass: "VI",<br>
+        rollno: 12,<br>
+        };<br>
+        var myContainer = <HTMLElement>document.getElementById("output2");<br>
+          myContainer.innerHTML += "Before Deleted :" + Object.keys(student).toString();<br>
+          delete student["rollno"];<br>
+          myContainer.innerHTML +=<br>
+          "</br>After Deleted :" + Object.keys(student).toString(); <br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output2" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #3</span>
+        Write a TypeScript program to get the length of a TypeScript object.
+        Sample object :<br>
+        var student = {<br>
+        name : "David Rayy",<br>
+        sclass : "VI",<br>
+        rollno : 12 };<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q3()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        var student = {<br>
+        name: "David Rayy",<br>
+        sclass: "VI",<br>
+        rollno: 12,<br>
+        };<br>
+        var myContainer = <HTMLElement>document.getElementById("output3");<br>
+          myContainer.innerHTML ="The Length Of A TypeScript Object is <br>"
+          +Object.keys(student).length;<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output3" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #4</span>
+        Write a TypeScript program to display the reading status (i.e. display book name, author name and reading
+        status) of the following books.<br>
+
+        var library = [ <br>
+        {<br>
+        author: 'Bill Gates',<br>
+        title: 'The Road Ahead',<br>
+        readingStatus: true<br>
+        },<br>
+        {<br>
+        author: 'Steve Jobs',<br>
+        title: 'Walter Isaacson',<br>
+        readingStatus: true<br>
+        },<br>
+        {<br>
+        author: 'Suzanne Collins',<br>
+        title: 'Mockingjay: The Final Book of The Hunger Games', <br>
+        readingStatus: false<br>
+        }];<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q4()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        for (var i = 0; i < library.length; i++) {<br>
+          var myContainer = <HTMLElement>document.getElementById("output4");<br>
+            myContainer.innerHTML += "Title :"+library[i].Title +
+            "<br>" +
+            "Author :"+ library[i].Author +
+            "<br>" +
+            "ReadingStatus :"+ library[i].ReadingStatus +
+            "<br>";
+            }<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output4" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #5</span>
+        Write a TypeScript program to get the volume of a Cylinder with four decimal places using object classes.<br>
+        Volume of a cylinder : V = πr2h<br>
+        where r is the radius and h is the height of the cylinder.<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q5()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        var height: string | null = prompt("Please Enter Height", "7");<br>
+        var diameter: string | null = prompt("Please Enter Diameter", "4");<br>
+        if (height && diameter) {<br>
+        class Cylinder {<br>
+        volume(height: number, diameter: number): number {<br>
+        var radius = diameter / 2;<br>
+        return height * Math.PI * radius * radius;<br>
+        }<br>
+        }<br>
+        var obj = new Cylinder();<br>
+        var myContainer = <HTMLElement>document.getElementById("output5");<br>
+          myContainer.innerHTML = "Volume of the cylinder with four decimal places is :<br>" +
+          obj.volume(Number(height), Number(diameter)).toFixed(4);<br>
+          }<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output5" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #6</span>
+        Write a Bubble Sort algorithm in TypeScript. <br>
+        Note : Bubble sort is a simple sorting algorithm that works by repeatedly stepping through the list to be
+        sorted,<br>
+        Sample Data: [6,4,0, 3,-2,1]<br>
+        Expected Output : [-2, 0, 1, 3, 4, 6]<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q6()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        var num: number = parseInt(prompt("Enter number of elements")!);<br>
+        var array: number[] = [100];<br>
+        for (let x = 0; x < num; x++)<br>
+          array[x] = parseInt(prompt("Enter " + num + " integers")!);<br>
+          for (let i = 0; i < array.length; i++) {<br>
+            for (let j = 0; j < array.length; j++) {<br>
+              if (array[j] > array[j + 1]) {<br>
+              [array[j], array[j + 1]] = [array[j + 1], array[j]];<br>
+              }<br>
+              }<br>
+              }<br>
+              var myContainer = <HTMLElement>document.getElementById("output6");<br>
+                myContainer.innerHTML =<br>
+                "Sorted Array in ascending order is :" + array;<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output6" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #7</span>
+        Write a TypeScript program which returns a subset of a string. <br>
+        Sample Data: dog<br>
+        Expected Output: ["d", "do", "dog", "o", "og", "g"]<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q7()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        var str: string = prompt("Please Enter String")!;<br>
+        var subString:string[] = [];<br>
+        for (var i = 0; i < str.length; i++) <br>
+          {<br>
+          for (var j = i+1; j<str.length+1; j++) <br>
+            {<br>
+            subString.push(str.slice(i,j));<br>
+            }<br>
+            }<br>
+            var myContainer = <HTMLElement>document.getElementById("output7");<br>
+              myContainer.innerHTML =<br>
+              str+ "subString is :"+subString;<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output7" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #8</span>
+        Write a TypeScript program to create a Clock. <br>
+        Note: The output will come every second.<br>
+        Expected Console Output :<br>
+        "14:37:42"<br>
+        "14:37:43"<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q8()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+
+        var x = new Date()<br>
+        var myContainer = <HTMLElement>document.getElementById("output8");<br>
+          myContainer.innerHTML += x.getHours() + ' :' + x.getMinutes() + ' :' + x.getSeconds() + '<br>'
+
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output8" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #9</span>
+        Write a TypeScript program to calculate the area and perimeter of a circle.<br>
+        Note : Create two methods to calculate the area and perimeter.<br>
+        The radius of the circle will be supplied by the user.<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q9()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output9" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #10</span>
+        Write a TypeScript program to sort an array of TypeScript objects.  <br> 
+        Sample Object : <br>
+        var library = [ 
+           {
+               title:  'The Road Ahead',
+               author: 'Bill Gates',
+               libraryID: 1254
+           },
+           {
+               title: 'Walter Isaacson',
+               author: 'Steve Jobs',
+               libraryID: 4264
+           },
+           {
+               title: 'Mockingjay: The Final Book of The Hunger Games',
+               author: 'Suzanne Collins',
+               libraryID: 3245
+           }]; <br>
+        Expected Output: <br>
+         [[object Object] {
+          author: "Walter Isaacson",
+          libraryID: 4264,
+          title: "Steve Jobs"
+        }, [object Object] {
+          author: "Suzanne Collins",
+          libraryID: 3245,
+          title: "Mockingjay: The Final Book of The Hunger Games"
+        }, [object Object] {
+          author: "The Road Ahead",
+          libraryID: 1254,
+          title: "Bill Gates"
+        }]
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q10()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        let sortedlibrary = library.sort((a, b) => (a.libraryID > b.libraryID) ? -1 : 1);<br>
+        var myContainer = <HTMLElement>document.getElementById("output10");<br>
+        myContainer.innerHTML = JSON.stringify(sortedlibrary); <br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output10" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #11</span>
+        Write a TypeScript function to print all the methods in an TypeScript object.   <br>
+        Test Data :<br>
+        console.log(all_properties(Array));<br>
+        ["length", "name", "arguments", "caller", "prototype", "isArray", "observe", "unobserve"]<br>
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q11()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        var classobj = Object;<br>
+        var result:string[] =(Object.getOwnPropertyNames(classobj).filter(function (x) {<br>
+    
+            return typeof classobj[x] === 'function'<br>
+        }));<br>
+        var myContainer = <HTMLElement>document.getElementById("output11");<br>
+        myContainer.innerHTML += result;<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output11" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+   <!--  -->
+   <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #12</span>
+        Write a TypeScript function to parse an URL.
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q12()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+    
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output12" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+   <!--  -->
+   <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #13</span>
+        Write a TypeScript function to retrieve all the names of object's own and inherited properties.
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q13()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        var object1 = {<br>
+          a: 1,<br>
+          b: 2,<br>
+          c: 3,<br>
+      };<br>
+      var myContainer = <HTMLElement>document.getElementById("output13");<br>
+      myContainer.innerHTML += (Object.getOwnPropertyNames(object1));<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output13" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #14</span>
+        Write a TypeScript function to retrieve all the values of an object's properties.
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q14()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        const object1 = {<br>
+          a: 1,<br>
+          b: 2,<br>
+          c: 3<br>
+      };<br>
+      var myContainer = <HTMLElement>document.getElementById("output14");<br>
+      myContainer.innerHTML += (Object.values(object1));<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output14" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+   <!--  -->
+   <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #15</span>
+        Write a TypeScript function to convert an object into a list of `[key, value]` pairs.
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q15()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        var obj = {<br>
+          "1": 5,<br>
+          "2": 7,<br>
+          "3": 0,<br>
+          "4": 0,<br>
+          "5": 0<br>
+      };<br>
+      console.log(Object.entries(obj));<br>
+      var myContainer = <HTMLElement>document.getElementById("output15");<br>
+      myContainer.innerHTML += JSON.stringify(Object.entries(obj));<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output15" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+   <!--  -->
+   <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #16</span>
+        Write a TypeScript function to get a copy of the object
+         where the keys have become the values and the values the keys.
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q16()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+     
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output16" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+
+   <!--  -->
+   <div class="question">
+    <section class="title">
+      <h1 class="heading" style="border-top: 2px solid #666;">
+        <span>Question #17</span>
+        Write a TypeScript function to check whether an object contains given property.
+      </h1>
+    </section>
+    <section class="main">
+      <div>
+        <button onclick="Q17()" class="btn">Run</button>
+      </div>
+      <h1 class="heading">Source Code</h1>
+      <div class="box" id="statement">
+        type Student = {<br>
+          name?: string;<br>
+          class?: string;<br>
+          rollno?: number;<br>
+      };<br>
+      const std: Student = {<br>
+          name: 'moon',<br>
+          class: 'BSCS',<br>
+          rollno: 5,<br>
+      };<br>
+      if (std.name !== undefined) {<br>
+          // now string<br>
+          var myContainer = <HTMLElement>document.getElementById("output17");<br>
+          myContainer.innerHTML += (std.name.toLowerCase());<br>
+      }<br>
+      </div>
+      <h1 class="heading">output / result</h1>
+      <div class="box" id="output17" style="text-align: center;"></div>
+    </section>
+  </div>
+  <!--  -->
+  <script src="script.js"></script>
+</body>
+
+</html>
